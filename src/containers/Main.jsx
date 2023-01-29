@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
-import * as Realm from 'realm-web'
-import { Audio } from 'react-loader-spinner'
 import { nanoid } from "nanoid"
 import FilterButton from '../components/FilterButton'
 import Todo from '../components/Todo'
@@ -16,14 +14,12 @@ function Main() {
 
     const fetchData = async () => {
         setFetchStatus("loading")
-        // const REALM_APP_ID = "todos-xirtb"
-        // const app = new Realm.App({ id: REALM_APP_ID });
-        // const credentials = Realm.Credentials.anonymous();
+
 
         const API_URL = "http://localhost:3000/todos";
 
         try {
-            // const user = await app.logIn(credentials);
+
             const RESPONSE = await fetch(API_URL)
             const allTodos = await RESPONSE.json()
             setTasks(await allTodos)
@@ -44,7 +40,6 @@ function Main() {
 
     if (fetchStatus === 'idle' || fetchStatus === 'loading' || tasks === null) {
         return <div className='loading'>
-            <Audio color="#00BFFF" height={160} width={160} ariaLabel='loading' />
         </div>
     }
 

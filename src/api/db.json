@@ -3,37 +3,37 @@
         {
             
             "id": "todo-1",
-            "name": "Jog around the park 3x",
-            "completed": false
-        },
-        {
-            
-            "id": "todo-2",
-            "name": "10 minutes meditation",
-            "completed": false
-        },
-        {
-            
-            "id": "todo-0",
-            "name": "Complete online Javascript course",
+            "name": "task 1",
             "completed": true
         },
         {
             
-            "id": "todo-4",
-            "name": "Pick up groceries",
+            "id": "todo-2",
+            "name": "task 2",
             "completed": false
         },
         {
             
             "id": "todo-3",
-            "name": "Read for 1 hour",
+            "name": "task 3",
+            "completed": true
+        },
+        {
+            
+            "id": "todo-4",
+            "name": "task 4",
             "completed": false
         },
         {
             
             "id": "todo-5",
-            "name": "Complete Frontend Mentor challenges",
+            "name": "task 5",
+            "completed": false
+        },
+        {
+            
+            "id": "todo-6",
+            "name": "task 6",
             "completed": false
         }
     ]
