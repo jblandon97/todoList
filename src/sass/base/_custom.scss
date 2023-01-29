@@ -1,0 +1,51 @@
+@use "sass:math";
+@use "sass:color";
+
+
+$clr-bright-blue: hsl(220, 98%, 61%);
+$clr-check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+// ### Light Theme
+$clr-white: hsla(0, 0%, 100%, 1);
+$clr-very-light-gray: hsl(0 0% 98%);
+$clr-very-light-grayish: hsla(236, 33%, 92%, 1);
+$clr-light-grayish-blue: hsl(233, 11%, 84%);
+$clr-dark-grayish-blue: hsla(236, 9%, 61%, 1);
+$clr-very-dark-grayish-blue2: hsl(235, 19%, 35%);
+
+
+$clr-dk-very-dark-blue: hsl(235, 21%, 11%);
+$clr-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+$clr-dk-light-grayish-blue: hsl(234, 39%, 85%);
+// Light Grayish Blue (hover): hsl(236, 33%, 92%)
+$clr-dk-dark-grayish-blue: hsl(234, 11%, 52%);
+$clr-dk-very-dark-grayish-blue2: hsl(233, 14%, 35%);
+$clr-dk-very-dark-grayish-blue3: hsl(237, 14%, 26%);
+
+
+/* screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    /* added line */
+    border: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+$colors: (
+    "primary": $clr-white,
+    "very-light-grey": $clr-very-light-gray
+);
+
+@debug map-get($colors , "purple")

@@ -1,0 +1,14 @@
+@use '../base';
+@use '../utils';
+
+.attribution {
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding-block-end: 2rem;
+
+    @include utils.mQ(43.75rem) {
+        flex-direction: row;
+    }
+}

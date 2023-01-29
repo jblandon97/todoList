@@ -1,0 +1,30 @@
+@use '../base';
+@use '../utils';
+
+.form-group-edit {
+    grid-area: 1/1/3/8;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-group-edit {
+    grid-area: 3/1/5/8;
+    display: flex;
+    gap: 1rem;
+}
+
+.todo-edit-cancel,
+.todo-edit-save {
+    flex: 1 1 50%;
+    padding: .5rem;
+    border: .2rem solid base.$clr-dk-very-dark-grayish-blue3;
+    background: base.$clr-light-grayish-blue;
+
+    &:focus,
+    &:hover {
+        color: base.$clr-bright-blue;
+        cursor: pointer;
+        outline: dashed currentColor;
+        outline-offset: 0.15em;
+    }
+}

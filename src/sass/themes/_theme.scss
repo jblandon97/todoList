@@ -1,0 +1,87 @@
+@use '../base';
+@use '../utils';
+
+.app {
+    background-color: base.$clr-very-light-gray;
+}
+
+.hide-theme-img {
+    display: none;
+}
+
+.btn-theme-control {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed white;
+        outline-offset: 0.15em;
+    }
+}
+
+.light-theme {
+    background-color: base.$clr-very-light-gray;
+}
+
+.dark-theme {
+    background-color: base.$clr-dk-very-dark-blue;
+    color: base.$clr-very-light-gray;
+
+    .header {
+        background-image: url('../../imgs/bg-mobile-dark.jpg');
+
+        @include utils.mQ(43.75rem) {
+            background-image: url('../../imgs/bg-desktop-dark.jpg');
+        }
+    }
+
+    .todo-list {
+        background-color: base.$clr-very-dark-desaturated-blue;
+    }
+
+    .form,
+    .new-todo {
+        background-color: base.$clr-very-dark-desaturated-blue;
+        color: base.$clr-white;
+    }
+
+    input[type="checkbox"] {
+        background-color: base.$clr-very-dark-desaturated-blue;
+    }
+
+    .btn-edit,
+    .clear-items-btn {
+        color: base.$clr-white;
+    }
+
+    .delete-btn {
+        filter: invert(1) brightness(100%);
+    }
+
+    .todo-edit-cancel,
+    .todo-edit-save,
+    .todo-text {
+        color: base.$clr-white;
+        background-color: base.$clr-dk-very-dark-grayish-blue3;
+    }
+
+    .filters-container,
+    .completed,
+    .container-btn-clear {
+        background-color: base.$clr-very-dark-desaturated-blue;
+        color: base.$clr-white;
+    }
+
+    .todo+.todo {        
+        &::before {            
+            background-color: base.$clr-white;           
+        }
+    }
+
+    .summary {
+        border-top: 1px solid base.$clr-white;
+    }
+}

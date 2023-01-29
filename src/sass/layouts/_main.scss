@@ -1,0 +1,47 @@
+@use '../base';
+@use '../utils';
+
+.main {
+    position: relative;
+    padding-inline: 1.5rem;
+    max-width: 33.75rem;
+    margin-inline: auto;
+	margin-top: 5rem;
+
+	@include utils.mQ(22.5rem) {
+        margin-top: 0;
+    }
+
+    @include utils.mQ(43.75rem) {
+        padding-inline: 0;
+		margin-top: 2rem;
+    }
+
+    @include utils.mQ(78.75rem) {
+        margin-top: -2rem;
+    }
+}
+
+.todo-container {
+    display: grid;
+    grid-template-columns: 1fr 9fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.drag-and-drop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit; 
+    padding-block: .5rem;
+    border-radius: 5px;
+    position: relative;
+    top: -4rem;
+}
+
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

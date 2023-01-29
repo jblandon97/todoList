@@ -1,0 +1,39 @@
+@use '../base';
+@use '../utils';
+
+.delete-btn,
+.btn-edit {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: .75rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: base.$clr-dk-very-dark-blue;
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed currentColor;
+        outline-offset: 0.15em;
+    }
+}
+
+.delete-btn {
+    img {
+        min-width: 0.75rem;
+    }
+}
+
+.btn-edit {
+    justify-content: flex-start;
+
+    @include utils.mQ(43.75rem) {
+        font-size: 1.125rem;
+    }
+}
+
+.btn-hide {
+    display: none;
+}

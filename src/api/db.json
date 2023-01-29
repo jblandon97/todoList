@@ -1,0 +1,40 @@
+{
+    "todos": [
+        {
+            "_id": "6245f12707e10f8ebf873dc8",
+            "id": "todo-1",
+            "name": "Jog around the park 3x",
+            "completed": false
+        },
+        {
+            "_id": "6245f12707e10f8ebf873dc9",
+            "id": "todo-2",
+            "name": "10 minutes meditation",
+            "completed": false
+        },
+        {
+            "_id": "6245f12707e10f8ebf873dc7",
+            "id": "todo-0",
+            "name": "Complete online Javascript course",
+            "completed": true
+        },
+        {
+            "_id": "6245f12707e10f8ebf873dcb",
+            "id": "todo-4",
+            "name": "Pick up groceries",
+            "completed": false
+        },
+        {
+            "_id": "6245f12707e10f8ebf873dca",
+            "id": "todo-3",
+            "name": "Read for 1 hour",
+            "completed": false
+        },
+        {
+            "_id": "6245f12707e10f8ebf873dcc",
+            "id": "todo-5",
+            "name": "Complete Frontend Mentor challenges",
+            "completed": false
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+@use '../base';
+@use '../utils';
+
+.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;   
+    grid-template-rows: 75px 75px;
+    font-size: 0.75rem;
+    top: -5rem;
+    row-gap: 1.5rem;
+    border-top: 1px solid black;
+    position: relative;    
+
+    @include utils.mQ(43.75rem) {
+        font-size: 0.875rem;
+        grid-template-rows: 75px;
+    }
+
+    @include utils.mQ(68.75rem) {
+        top: -6rem;
+    }
+}
+
+.completed {
+    grid-area: 1/1/1/3; 
+    color: base.$clr-dark-grayish-blue;     
+    background-color: base.$clr-white;
+    border-bottom-left-radius: 5px;
+    padding-inline-start: 1.5rem;
+    display: flex;
+    align-items: center;  
+}
+

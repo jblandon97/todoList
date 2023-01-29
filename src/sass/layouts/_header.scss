@@ -1,0 +1,33 @@
+@use '../base';
+@use '../utils';
+
+.header {
+    padding-block: 3rem;
+    padding-inline: 1.625rem;
+    background-image: url('../../imgs/bg-mobile-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 15/8;
+
+    @include utils.mQ(43.75rem) {
+        padding-block: 4.25rem;
+        background-image: url('../../imgs/bg-desktop-light.jpg');
+        aspect-ratio: 24/5;
+    }
+}
+
+.main-title {
+    color: hsla(0, 0%, 100%, 1);
+    text-transform: uppercase;
+    letter-spacing: 12px;
+
+    @include utils.mQ(43.75rem) {
+        font-size: 2.5rem;
+        letter-spacing: 15px;
+    }
+}
+
+.nav {
+    max-width: 33.75rem;
+    margin-inline: auto;
+}

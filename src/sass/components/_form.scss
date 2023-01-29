@@ -1,0 +1,164 @@
+@use '../base';
+@use '../utils';
+
+.form {
+    position: relative;
+    top: -5.8rem;
+    background-color: base.$clr-white;
+    border-radius: 5px;
+
+    @include utils.mQ(68.75rem) {
+        top: -6.8rem;
+    }
+}
+
+.lbl-new-todo {
+    color: base.$clr-dark-grayish-blue;
+    position: absolute;
+    left: 2rem;
+    top: -0.75rem;
+    font-size: 0.75rem;
+    transform-origin: top left;
+    transform: translate(1rem, 1.8rem) scale(1);
+    transition: all 0.1s ease-in-out;
+
+    @include utils.mQ(43.75rem) {
+        font-size: 1.125rem;
+    }
+}
+
+.new-todo {
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: 0.75rem;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    outline: none;
+    border: none;
+    padding-inline-start: 3rem;
+    color: base.$clr-dk-very-dark-grayish-blue2;
+    background-color: base.$clr-white;
+
+    @include utils.mQ(43.75rem) {
+        font-size: 1.125rem;
+    }
+}
+
+.btn-submit {
+    position: absolute;
+    left: 1.25rem;
+    top: 30%;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    border: 1px solid base.$clr-very-light-grayish;
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed base.$clr-bright-blue;
+        outline-offset: 0.15em;
+    }
+}
+
+.search-container.active {
+    .lbl-new-todo {
+        top: -3.5rem;
+        color: base.$clr-very-light-gray;
+    }
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 0.05em solid base.$clr-very-light-grayish;   
+    transform: translateY(-0.075em);
+    border-radius: 50%;
+    transition: 120ms all ease-out;
+    display: grid;
+    place-content: center;
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed base.$clr-bright-blue;
+        outline-offset: 0.15em;
+    }
+
+    @include utils.mQ(43.75rem) {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em base.$clr-dk-very-dark-blue;
+    background-color: CanvasText;
+    transform-origin: bottom left;
+}
+
+input[type="checkbox"]:checked {
+    background: url("../../imgs/icon-check.svg"),
+        linear-gradient(-45deg, #c058f3, #5df) no-repeat;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: 120ms all ease-in-out;
+    border: inherit;
+}
+
+.todo-label {
+    font-size: 0.75rem;
+    color: base.$clr-dark-grayish-blue;
+    @include utils.mQ(43.75rem) {
+        font-size: 1.125rem;
+    }
+}
+
+.todo-list {
+    background-color: base.$clr-white;
+    position: relative;
+    top: -4.8rem;
+    padding-inline: 1.25rem;
+    padding-block: 1.5rem;
+    border-radius: 5px;
+    //  box-shadow: 3px 3px 3px 12px base.$clr-very-light-grayish;
+
+    @include utils.mQ(68.75rem) {
+        top: -5.8rem;
+    }
+}
+
+.todo+.todo {
+    position: relative;
+    margin-top: 1rem;  
+    padding-block: 1rem;
+    &::before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: calc(100% + 2.5rem);
+        margin-left: -1.25rem;
+        background-color: base.$clr-dark-grayish-blue;
+        left: 0;
+        top: 0;
+    }
+}
+
+.line-through {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
