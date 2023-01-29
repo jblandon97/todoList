@@ -2,37 +2,36 @@
     "todos": [
         {
             
-            "id": "todo-1",
             "name": "task 1",
             "completed": true
         },
         {
             
-            "id": "todo-2",
+            
             "name": "task 2",
             "completed": false
         },
         {
             
-            "id": "todo-3",
+            
             "name": "task 3",
             "completed": true
         },
         {
             
-            "id": "todo-4",
+            
             "name": "task 4",
             "completed": false
         },
         {
             
-            "id": "todo-5",
+            
             "name": "task 5",
             "completed": false
         },
         {
             
-            "id": "todo-6",
+            
             "name": "task 6",
             "completed": false
         }

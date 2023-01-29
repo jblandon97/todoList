@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
-import { nanoid } from "nanoid"
 import FilterButton from '../components/FilterButton'
 import Todo from '../components/Todo'
 import Form from '../components/Form'
@@ -116,10 +115,8 @@ function Main() {
 
     function addTask(name) {
         const newTask = {
-            id: "todo-" + nanoid(),
             name: name,
             completed: false,
-            key: "todo-" + nanoid()
         };
         setTasks([...tasks, newTask]);
     }
