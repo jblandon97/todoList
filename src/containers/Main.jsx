@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
-import * as Realm from 'realm-web'
 import { Audio } from 'react-loader-spinner'
 import { nanoid } from "nanoid"
 import FilterButton from '../components/FilterButton'
@@ -16,14 +15,11 @@ function Main() {
 
     const fetchData = async () => {
         setFetchStatus("loading")
-        // const REALM_APP_ID = "todos-xirtb"
-        // const app = new Realm.App({ id: REALM_APP_ID });
-        // const credentials = Realm.Credentials.anonymous();
+
 
         const API_URL = "http://localhost:3000/todos";
 
         try {
-            // const user = await app.logIn(credentials);
             const RESPONSE = await fetch(API_URL)
             const allTodos = await RESPONSE.json()
             setTasks(await allTodos)
@@ -64,7 +60,6 @@ function Main() {
 
     function toggleTaskCompleted(id) {
         const updatedTasks = tasks && tasks.map(task => {
-            // if this task has the same ID as the edited task
             if (id === task.id) {
                 return { ...task, completed: !task.completed }
             }

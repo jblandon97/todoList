@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import ReactTooltip from 'react-tooltip'
 
 function Form(props) {
     const [name, setName] = useState("")
@@ -53,7 +52,6 @@ function Form(props) {
                 >
                     <span className='sr-only'>add</span>
                 </button>
-                <ReactTooltip />
             </div>
         </form>
     )

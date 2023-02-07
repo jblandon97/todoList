@@ -5,7 +5,6 @@ export const ThemeContext = createContext()
 
 export const ThemeProvider = (props) => {
 
-    /* Get theme value from localStorage. */
     const getThemeFromLocalStorage = () => {
         return localStorage.getItem('globalTheme') === 'true'
     }
@@ -13,19 +12,14 @@ export const ThemeProvider = (props) => {
     const [theme, setTheme] = useState(getThemeFromLocalStorage)
    
 
-    /* Post to localStorage user preferred theme. */
     const postThemeToLocalStorage = (newTheme) => {
         localStorage.setItem('globalTheme', newTheme)
     }
-    /* Click handler */
     const onChange = () => {
         postThemeToLocalStorage(!theme)
         setTheme(!theme)
     }
     
-    /* Trigger useEffect only on render */
-    /* Set theme state to saved theme in local storage */
-
     useEffect(() => {
         const app = document.querySelector('.app')
         setTheme(getThemeFromLocalStorage())
