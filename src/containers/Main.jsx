@@ -17,9 +17,10 @@ function Main() {
         setFetchStatus("loading")
 
 
-        const API_URL = "http://localhost:3000/todos";
+        const API_URL = "http://localhost:3004/todos";
 
         try {
+            // const user = await app.logIn(credentials);
             const RESPONSE = await fetch(API_URL)
             const allTodos = await RESPONSE.json()
             setTasks(await allTodos)
@@ -40,7 +41,6 @@ function Main() {
 
     if (fetchStatus === 'idle' || fetchStatus === 'loading' || tasks === null) {
         return <div className='loading'>
-            <Audio color="#00BFFF" height={160} width={160} ariaLabel='loading' />
         </div>
     }
 
@@ -116,10 +116,8 @@ function Main() {
 
     function addTask(name) {
         const newTask = {
-            id: "todo-" + nanoid(),
             name: name,
             completed: false,
-            key: "todo-" + nanoid()
         };
         setTasks([...tasks, newTask]);
     }

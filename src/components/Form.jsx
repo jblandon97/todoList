@@ -36,7 +36,7 @@ function Form(props) {
             <div className="search-container">
                 <label htmlFor='new-todo'
                     className='lbl-new-todo'>
-                    Create a new todo...
+                    Create a new task...
                 </label>
                 <input type="text"
                     name="text"
